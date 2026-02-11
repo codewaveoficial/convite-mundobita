@@ -214,15 +214,14 @@ button:active {
   bottom: 20px;
   right: 20px;
 
-  width: 48px;
-  height: 48px;
+  width: 1%;
+  height: 1%;
 
   border-radius: 50%;
   border: none;
 
   background: rgba(0,0,0,0.55);
   color: #fff;
-  font-size: 1.2rem;
 
   backdrop-filter: blur(6px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.4);
