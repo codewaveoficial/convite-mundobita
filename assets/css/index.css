@@ -18,20 +18,6 @@ body.entrada {
   position: relative;
 }
 
-/* Fundo animado */
-.bg-shapes {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(
-    rgba(255,255,255,0.35) 2px,
-    transparent 2px
-  );
-  background-size: 40px 40px;
-  opacity: 0.22;
-  animation: moveBg 40s linear infinite;
-  z-index: 0;
-}
-
 @keyframes moveBg {
   from { background-position: 0 0; }
   to { background-position: 800px 400px; }
@@ -47,13 +33,13 @@ body.entrada {
 
 .character {
   position: absolute;
-  width: 140px;
+  width: 100px;
   animation: float 5s ease-in-out infinite;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
+  50% { transform: translateY(-10px); }
 }
 
 /* Posições */
@@ -87,27 +73,6 @@ body.entrada {
   background-repeat: no-repeat;
   z-index: -3;
 }
-
-
-/* ---------- TÍTULO CURVO (DESKTOP) ---------- */
-.titulo-curvo {
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.titulo-curvo svg {
-  width: 100%;
-  height: auto;
-}
-
-.texto-curvo {
-  font-size: 36px; /* 👈 bem maior no desktop */
-  stroke: rgba(0,0,0,0.22);
-  stroke-width: 1.2;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
-}
-
 
 /* Textos */
 .convite {
@@ -153,7 +118,14 @@ body.entrada {
   }
 }
 
-/* Esconde o Apresenta mobile por padrão (desktop) */
+.mundobita-mobile {
+  display: none;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
 .apresenta-mobile {
   display: none;
   font-size: 1.6rem;
@@ -174,45 +146,21 @@ body.entrada {
 
 /* Mobile */
 @media (max-width: 480px) {
-  /* Esconde o "Apresenta" do SVG */
-  .desktop-only {
-    display: none;
-  }
-
+  
   /* Mostra o Apresenta separado */
   .apresenta-mobile {
     display: block;
     font-size: 2.5rem;
   }
-}
 
-@media (max-width: 768px) {
-  .curve-text {
-    href: url(#curveMobile);
-  }
+  .mundobita-mobile {
+  display: block;
+    font-size: 2.5rem;
+    margin-top: 35%;
 }
-
-.curve-mobile {
-  display: none;
 }
 
 @media (max-width: 480px) {
-  .curve-desktop {
-    display: none;
-  }
-
-  .curve-mobile {
-    display: block;
-  }
-
-  .texto-curvo {
-    font-size: 70px;
-  }
-
-  .titulo-curvo svg {
-    height: 130px;
-  }
-
   /* Botão */
 #enterBtn {
   margin-top: 5%;
