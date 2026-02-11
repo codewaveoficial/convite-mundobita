@@ -1,0 +1,325 @@
+/* =====================================================
+   RESET GLOBAL
+   Remove margens padrão e define base tipográfica
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo 2', cursive;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden; /* evita corte vertical em telas menores */
+  background: #000;
+}
+
+
+
+/* =====================================================
+   VÍDEO DE FUNDO
+   Camada mais profunda da aplicação
+===================================================== */
+
+.video-background {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background: #000;
+}
+
+.video-background video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Vídeo desfocado que preenche a tela */
+.video-blur {
+  object-fit: cover;
+  filter: blur(18px) brightness(0.6);
+  transform: scale(1.1);
+}
+
+/* Vídeo principal central (mantém proporção) */
+.video-main {
+  object-fit: contain;
+}
+
+
+
+/* =====================================================
+   OVERLAY
+   Camada escura para melhorar contraste do texto
+===================================================== */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: -2;
+}
+
+
+
+/* =====================================================
+   ELEMENTOS FLUTUANTES DECORATIVOS
+===================================================== */
+
+.float {
+  position: absolute;
+  width: 70px;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+.star { top: 10%; left: 8%; }
+.cloud { top: 20%; right: 10%; animation-delay: 2s; }
+.music { bottom: 15%; left: 15%; animation-delay: 4s; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+
+
+/* =====================================================
+   ESTRUTURA PRINCIPAL DO CONVITE
+===================================================== */
+
+.invite {
+  position: relative;
+  min-height: 100vh;
+  padding: 1%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  text-align: center;
+  color: #fff;
+}
+
+
+
+/* =====================================================
+   TOPO DO CONVITE
+===================================================== */
+
+.invite-top {
+  width: 100%;
+  max-width: 420px;
+}
+
+.logo-bita {
+  width: 220px;
+  max-width: 80%;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.4));
+}
+
+.invite-top h1 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  opacity: 0.95;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.95rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+
+
+/* =====================================================
+   BASE DO CONVITE
+===================================================== */
+
+.invite-bottom {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 18%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+
+/* =====================================================
+   BOTÕES
+   Estilos organizados por hierarquia
+===================================================== */
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  font-weight: 800;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Botão principal */
+button.primary {
+  background: linear-gradient(135deg, #ffd54f, #ffb300);
+  color: #fff;
+  font-size: 1.05rem;
+  padding: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+}
+
+/* Botão secundário */
+button.secondary {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 12px;
+  border-radius: 40px;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Efeito leve ao pressionar */
+button:active {
+  transform: scale(0.97);
+}
+
+
+
+/* =====================================================
+   BOTÃO FLUTUANTE PLAY/PAUSE
+===================================================== */
+
+.play-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 1.2rem;
+
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  z-index: 5;
+}
+
+
+
+/* =====================================================
+   CONFETE
+===================================================== */
+
+canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ============================= */
+/* MODAL PRESENTES */
+/* ============================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  padding: 20px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  background: linear-gradient(135deg, #ffcc00, #ff6699);
+  padding: 28px;
+  border-radius: 28px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-content h2 {
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+}
+
+.presente-item {
+  background: rgba(255,255,255,0.2);
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.presente-item h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.presente-item a {
+  display: inline-block;
+  background: #fff;
+  color: #ff4081;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #fff;
+  color: #ff4081;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}

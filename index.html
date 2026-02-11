@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Convite do Murilo 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS da entrada -->
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body class="entrada">
+<div class="bg-parque"></div>
+
+  <!-- Música de fundo -->
+  <audio id="bgMusic" src="assets/music.mp3" loop></audio>
+
+  <!-- Fundo animado / decorativo -->
+  <div class="bg-shapes"></div>
+
+  <!-- Personagens Mundo Bita -->
+  <div class="characters">
+    <img src="assets/img/bita1.png" class="character c1" alt="Personagem Mundo Bita">
+    <img src="assets/img/bita2.png" class="character c2" alt="Personagem Mundo Bita">
+    <img src="assets/img/bita3.png" class="character c3" alt="Personagem Mundo Bita">
+    <img src="assets/img/bita4.png" class="character c4" alt="Personagem Mundo Bita">
+  </div>
+
+  <!-- Conteúdo central -->
+  
+  <main class="entrada-content">
+
+  <!-- Título curvo -->
+  <div class="titulo-curvo">
+    
+    <svg viewBox="0 0 600 200">
+      <defs>
+  <!-- Desktop -->
+  <path
+    id="curveDesktop"
+    d="M 50 140 Q 300 20 550 140"
+  />
+
+  <!-- Mobile -->
+  <path
+    id="curveMobile"
+    d="M 50 160 Q 300 40 550 160"
+  />
+</defs>
+
+      <text class="texto-curvo" font-weight="800">
+<!-- Desktop -->
+  <textPath
+    href="#curveDesktop"
+    startOffset="50%"
+    text-anchor="middle"
+    class="curve-desktop"
+  >
+    <!-- tspans -->
+          <tspan fill="#ff9800"> </tspan>
+          <tspan fill="#ffeb3b">M</tspan>
+          <tspan fill="#4caf50">u</tspan>
+          <tspan fill="#ff4081">n</tspan>
+          <tspan fill="#3f51b5">d</tspan>
+          <tspan fill="#9c27b0">o</tspan>
+          <tspan fill="#ff9800"> </tspan>
+          <tspan fill="#ff5252">B</tspan>
+          <tspan fill="#4caf50">i</tspan>
+          <tspan fill="#ff4081">t</tspan>
+          <tspan fill="#ffeb3b">a</tspan>
+
+          <tspan class="desktop-only" fill="#ff9800"> </tspan>
+          <tspan class="desktop-only" fill="#4caf50">A</tspan>
+          <tspan class="desktop-only" fill="#ff4081">p</tspan>
+          <tspan class="desktop-only" fill="#ffeb3b">r</tspan>
+          <tspan class="desktop-only" fill="#ff5252">e</tspan>
+          <tspan class="desktop-only" fill="#9c27b0">s</tspan>
+          <tspan class="desktop-only" fill="#4caf50">e</tspan>
+          <tspan class="desktop-only" fill="#ff4081">n</tspan>
+          <tspan class="desktop-only" fill="#ffeb3b">t</tspan>
+          <tspan class="desktop-only" fill="#ff9800">a</tspan>
+          <tspan class="desktop-only" fill="#ff9800">:</tspan>
+  </textPath>
+
+  <!-- Mobile -->
+  <textPath
+    href="#curveMobile"
+    startOffset="50%"
+    text-anchor="middle"
+    class="curve-mobile"
+  >
+    <!-- MESMOS tspans -->
+          <tspan fill="#ff9800"> </tspan>
+          <tspan fill="#ffeb3b">M</tspan>
+          <tspan fill="#4caf50">u</tspan>
+          <tspan fill="#ff4081">n</tspan>
+          <tspan fill="#3f51b5">d</tspan>
+          <tspan fill="#9c27b0">o</tspan>
+          <tspan fill="#ff9800"> </tspan>
+          <tspan fill="#ff5252">B</tspan>
+          <tspan fill="#4caf50">i</tspan>
+          <tspan fill="#ff4081">t</tspan>
+          <tspan fill="#ffeb3b">a</tspan>
+
+          <tspan class="desktop-only" fill="#ff9800"> </tspan>
+          <tspan class="desktop-only" fill="#4caf50">A</tspan>
+          <tspan class="desktop-only" fill="#ff4081">p</tspan>
+          <tspan class="desktop-only" fill="#ffeb3b">r</tspan>
+          <tspan class="desktop-only" fill="#ff5252">e</tspan>
+          <tspan class="desktop-only" fill="#9c27b0">s</tspan>
+          <tspan class="desktop-only" fill="#4caf50">e</tspan>
+          <tspan class="desktop-only" fill="#ff4081">n</tspan>
+          <tspan class="desktop-only" fill="#ffeb3b">t</tspan>
+          <tspan class="desktop-only" fill="#ff9800">a</tspan>
+          <tspan class="desktop-only" fill="#ff9800">:</tspan>
+  </textPath>
+
+
+      </text>
+    </svg>
+  </div>
+
+  <!-- Apresenta mobile -->
+  <div class="apresenta-mobile">
+    <span>A</span><span>p</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span><span>a</span>
+  </div>
+
+
+  <!-- Botão -->
+  <button id="enterBtn">
+    🎈 Entrar no Convite 🎈
+  </button>
+
+</main>
+
+
+  <!-- JS da entrada -->
+  <script src="assets/scripts/index.js"></script>
+</body>
+</html>

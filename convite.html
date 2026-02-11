@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convite do Murilo 🎉</title>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS correto -->
+  <link rel="stylesheet" href="./assets/css/convite.css">
+</head>
+<body>
+
+  <!-- Background (vídeo ou imagem futuramente) -->
+  <div class="video-background">
+  <video class="video-blur" autoplay loop muted playsinline>
+    <source src="./assets/video.mp4" type="video/mp4">
+  </video>
+
+  <video class="video-main" autoplay loop playsinline>
+    <source src="./assets/video.mp4" type="video/mp4">
+  </video>
+</div>
+
+  <div class="overlay"></div>
+
+
+  <!-- Conteúdo principal -->
+  <main class="invite">
+
+  <!-- TOPO -->
+  <section class="invite-top">
+    <img class="logo-bita" src="./assets/img/Festa-Bita.png" alt="Festa Bita">
+
+    <h1>🎈 Murilo faz 10 anos! 🎈</h1>
+    <p class="subtitle" id="countdown">⏳ Carregando contagem regressiva...</p>
+
+    <div class="info">
+      <span>📅 20 de Março</span>
+      <span>⏰ 16h</span>
+      <span>📍 Parque da cidade - Serra</span>
+    </div>
+  </section>
+
+  <!-- BASE -->
+  <section class="invite-bottom">
+    <button class="secondary" id="confirmarBtn">Confirmar Presença 🎉</button>
+    <button class="secondary" id="localBtn">📍 Ver Local</button>
+    <button class="secondary" id="btnPresente">🎁 Sugestão de Presente</button>
+  </section>
+
+  <!-- Play/Pause flutuante -->
+  <button id="playPause" class="play-toggle primary">⏸</button>
+
+</main>
+
+<!-- MODAL PRESENTES -->
+<div id="modalPresentes" class="modal">
+  <div class="modal-content">
+    <button class="close-modal" id="fecharModal">✖</button>
+
+    <h2>🎁 Sugestões de Presente</h2>
+
+    <div class="presentes-lista">
+
+      <div class="presente-item">
+        <h3>🚲 Bicicleta Infantil</h3>
+        <a href="https://www.amazon.com.br/" target="_blank">
+          Comprar
+        </a>
+      </div>
+
+      <div class="presente-item">
+        <h3>🧩 Kit Lego</h3>
+        <a href="https://www.amazon.com.br/" target="_blank">
+          Comprar
+        </a>
+      </div>
+
+      <div class="presente-item">
+        <h3>🎮 Jogo Educativo</h3>
+        <a href="https://www.amazon.com.br/" target="_blank">
+          Comprar
+        </a>
+      </div>
+
+      <div class="presente-item">
+        <h3>🎮 Jogo Educativo</h3>
+        <a href="https://www.amazon.com.br/" target="_blank">
+          Comprar
+        </a>
+      </div>
+
+      <div class="presente-item">
+        <h3>🎮 Jogo Educativo</h3>
+        <a href="https://www.amazon.com.br/" target="_blank">
+          Comprar
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Confete -->
+  <canvas id="confetti"></canvas>
+
+  <!-- JS correto -->
+  <script src="./assets/scripts/convite.js"></script>
+</body>
+</html>
