@@ -211,11 +211,11 @@ button:active {
 
 .play-toggle {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 35px;
 
-  width: 1%;
-  height: 1%;
+  width: 2%;
+  height: 2%;
 
   border-radius: 50%;
   border: none;
